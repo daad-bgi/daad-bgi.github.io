@@ -163,6 +163,66 @@
       color: #777;
     }
 
+
+    .avatar-large { display:block; }
+
+    .social-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 18px;
+    }
+
+    .stamp {
+      display: inline-block;
+      padding: 6px 12px;
+      border-radius: 4px;
+      font-size: 13px;
+      font-weight: bold;
+      color: white;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+
+    .stamp:hover { opacity: 0.85; }
+    .stamp.linkedin { background: #0a66c2; }
+    .stamp.scholar  { background: #4285f4; }
+    .stamp.orcid    { background: #a6ce39; color: #222; }
+
+    .profile-content section { margin-bottom: 35px; }
+
+    .abstract {
+      border: 1px solid #e5e5e5;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin-bottom: 12px;
+      background: #fcfcfc;
+    }
+
+    .abstract strong { color: #222; }
+
+    .abstract summary {
+      cursor: pointer;
+      font-weight: bold;
+      color: #222;
+    }
+
+    .abstract .meta {
+      display: block;
+      font-weight: normal;
+      font-size: 13px;
+      color: #777;
+      margin-top: 4px;
+    }
+
+    .abstract p {
+      margin: 12px 0 8px 0;
+      font-size: 15px;
+    }
+
+    .abstract a { color: #0056b3; font-size: 14px; }
+
     /* Responsive design for smaller screens */
     @media (max-width: 768px) {
       .profile-container {
@@ -202,30 +262,61 @@
   <a href="index.html" class="back-link">← Back to all scholars</a>
 
   <div class="profile-container">
-    
+
     <div class="profile-sidebar">
-      <div class="avatar-large"></div>
+      <img class="avatar-large" src="images/sanket-samal.jpg" alt="Portrait of Sanket Samal" onerror="this.style.opacity='0'">
       <h2>Sanket Samal</h2>
-      <div class="role">DAAD PhD Scholar<br>Planetary Science</div>
-      <a href="mailto:your.email@uni-bayreuth.de" class="contact-btn">Email Sanket</a>
+      <div class="role">DAAD PhD Scholar<br>Cosmochemistry &amp; Isotope Geochemistry</div>
+      <a href="mailto:EMAIL-TO-BE-ADDED" class="contact-btn">Email Sanket</a>
+
+      <div class="social-links">
+        <a class="stamp linkedin" href="https://www.linkedin.com/in/sanket-samal-33a516252/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a class="stamp scholar" href="https://scholar.google.com/citations?user=teOQ5AIAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+      </div>
     </div>
 
     <div class="profile-content">
-      
-      <h3>About Me</h3>
-      <p>I am a DAAD PhD Scholar in Planetary Science currently advancing my research at the Bayerisches Geoinstitut (BGI). I graduated from [Insert Previous University/Degree] before moving to Germany to pursue my doctoral studies. My work is deeply rooted in cosmochemistry, exploring the fundamental processes that shaped our early solar system.</p>
 
-      <h3>Current Research</h3>
-      <p>My research focuses on planetary differentiation processes and isotopic systematics. Specifically, I am analyzing various meteorite samples—including NWA 6901, Erg Atouila 001, NWA 11561, and NWA 12455—through petrographic reporting, mineral separation, and chronological analysis.</p>
-      <p>A significant portion of my lab work involves developing and refining methodologies for measuring Al-Mg isotope ratios in rock standards and meteorites to better understand the timelines of early solar system formation.</p>
+      <section>
+        <h3>About Me</h3>
+        <p>I am a doctoral candidate at the Bayerisches Geoinstitut (BGI), University of Bayreuth, funded by a DAAD scholarship. I completed my master's degree at IISER Pune, where my thesis dealt with the geochemistry of basalts. I then moved from terrestrial basalts and impact glasses to meteorites, to study how the early Solar System's rocky bodies formed and evolved.</p>
+      </section>
 
-      <h3>Selected Expertise</h3>
-      <ul>
-        <li>Cosmochemistry and Planetary Differentiation</li>
-        <li>Al-Mg Isotope Systematics</li>
-        <li>Meteorite Petrography and Analysis</li>
-        <li>Analytical Techniques: SEM-EDS, EPMA</li>
-      </ul>
+      <section>
+        <h3>Research Interests</h3>
+        <ul>
+          <li>Petrogenesis of ungrouped and primitive achondrites</li>
+          <li>Isotope geochronology: Al-Mg, Rb-Sr and U-Pb systems</li>
+          <li>Thermal histories and differentiation of asteroidal crusts</li>
+          <li>In-situ trace-element and isotope analysis by LA-ICP-MS</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Current Research</h3>
+        <p>My thesis focuses on ungrouped achondrites, particularly the Erg Atouila 001 suite, combining petrography, mineral chemistry and multi-isotope approaches to constrain their origin and cooling history. Part of my lab work is developing in-situ methods for dating and isotope measurement of meteorite minerals.</p>
+      </section>
+
+      <section>
+        <h3>Analytical Techniques</h3>
+        <ul>
+          <li>EPMA and SEM-EDS</li>
+          <li>LA-ICP-MS and LA-MC-ICP-MS/MS</li>
+          <li>XRF, Q-ICP-MS and XRD</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Conference Abstracts</h3>
+
+        <div class="abstract">
+          <strong>Erg Atouila 001 Ungrouped Achondrite: Implications for Evolution of Na-Rich Asteroidal Crusts</strong>
+          <span class="meta">Samal, S., Hu, X-J., Timoner, C., Hu, S., Grandhomme, E., Boyet, M., and Bouvier, A. · LPI Contributions 3162, abstract 5445 (2026)</span>
+        </div>
+
+        <!-- To add the abstract text, change the div above to
+             <details class="abstract"><summary>…</summary><p>text</p></details> -->
+      </section>
 
     </div>
   </div>
